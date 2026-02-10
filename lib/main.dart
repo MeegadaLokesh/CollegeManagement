@@ -1,5 +1,5 @@
-import 'package:collegemanagement/Global/login.dart' show LoginPage;
 import 'package:flutter/material.dart';
+import 'package:collegemanagement/Global/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,12 +8,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Vibrant College',
-      debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const StudentLoginPage(),
     );
   }
 }
